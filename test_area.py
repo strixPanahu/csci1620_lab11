@@ -103,53 +103,57 @@ class TestMethods(unittest.TestCase):
             area.triangle(2, 0)
 
     def test_pass_circle_int(self):
-        self.assertEquals(area.circle(int(2)), (2 ** 2) * pi)
+        self.assertEqual(area.circle(int(2)), (2 ** 2) * pi)
 
     def test_pass_circle_float(self):
-        self.assertEquals(area.circle(float(2)), (2 ** 2) * pi)
+        self.assertEqual(area.circle(float(2)), (2 ** 2) * pi)
 
     def test_pass_square_int(self):
-        self.assertEquals(area.square(int(2)), 4)
+        self.assertEqual(area.square(int(2)), 4)
 
     def test_pass_square_float(self):
-        self.assertEquals(area.square(float(2)), 4)
+        self.assertEqual(area.square(float(2)), 4)
 
     def test_pass_rectangle_ints(self):
-        self.assertEquals(area.rectangle(int(2), int(2)), 4)
+        self.assertEqual(area.rectangle(int(2), int(2)), 4)
 
     def test_pass_rectangle_floats(self):
-        self.assertEquals(area.rectangle(float(2), float(2)), 4)
+        self.assertEqual(area.rectangle(float(2), float(2)), 4)
 
     def test_pass_rectangle_int_float(self):
-        self.assertEquals(area.rectangle(int(2), float(2)), 4)
+        self.assertEqual(area.rectangle(int(2), float(2)), 4)
 
     def test_pass_rectangle_float_int(self):
-        self.assertEquals(area.rectangle(float(2), int(2)), 4)
+        self.assertEqual(area.rectangle(float(2), int(2)), 4)
 
     def test_pass_triangle_ints(self):
-        self.assertEquals(area.triangle(int(2), int(2)), 2)
+        self.assertEqual(area.triangle(int(2), int(2)), 2)
 
     def test_pass_triangle_floats(self):
-        self.assertEquals(area.triangle(float(2), float(2)), 2)
+        self.assertEqual(area.triangle(float(2), float(2)), 2)
 
     def test_pass_triangle_int_float(self):
-        self.assertEquals(area.triangle(int(2), float(2)), 2)
+        self.assertEqual(area.triangle(int(2), float(2)), 2)
 
     def test_pass_triangle_float_int(self):
-        self.assertEquals(area.triangle(float(2), int(2)), 2)
+        self.assertEqual(area.triangle(float(2), int(2)), 2)
 
     def test_pass_circle_random(self):
-        param = random() * 100
-        self.assertEquals(area.circle(param), (param ** 2) * pi)
+        for i in range(10):
+            param = random() * 100
+            self.assertEqual(area.circle(param), (param ** 2) * pi)
 
     def test_pass_square_random(self):
-        param = random() * 100
-        self.assertEquals(area.square(param), param * param)
+        for i in range(10):
+            param = random() * 100
+            self.assertEqual(area.square(param), param * param)
 
     def test_pass_rectangle_random(self):
-        params = [random() * 100, random() * 100]
-        self.assertEquals(area.rectangle(params[0], params[1]), params[0] * params[1])
+        for i in range(10):
+            params = [random() * 100, random() * 100]
+            self.assertEqual(area.rectangle(params[0], params[1]), params[0] * params[1])
 
     def test_pass_triangle_random(self):
-        params = [random() * 100, random() * 100]
-        self.assertEquals(area.triangle(params[0], params[1]), (params[0] * params[1]) / 2)
+        for i in range(10):
+            params = [random() * 100, random() * 100]
+            self.assertEqual(area.triangle(params[0], params[1]), (params[0] * params[1]) / 2)

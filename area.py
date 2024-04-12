@@ -1,3 +1,13 @@
+"""
+    CSCI 1620 001/851
+    Professor Owora
+    Week 12 - Lab 11
+    11/4/2024
+
+    https://github.com/strixPanahu/csci1620_lab11
+"""
+
+
 from math import pi
 
 
